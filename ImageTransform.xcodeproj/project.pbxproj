@@ -45,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A7155E131AABE15C002342DF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A78629401A899A5100829A7D /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
 		A78629421A899A5B00829A7D /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
 		A78AEA071A8CE0DA00F95E16 /* SelectMultiple.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SelectMultiple.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +105,7 @@
 		A7EB88261A83E6E5003268DD = {
 			isa = PBXGroup;
 			children = (
+				A7155E131AABE15C002342DF /* README.md */,
 				A7EB88311A83E6E5003268DD /* ImageTransform */,
 				A78AEA081A8CE0DA00F95E16 /* SelectMultiple */,
 				A7EB88301A83E6E5003268DD /* Products */,
