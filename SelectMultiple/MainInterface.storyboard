@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ObA-dk-sSI">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Image-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController title="Image" id="ObA-dk-sSI" customClass="ActionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="NOA-Dm-cuz">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="3HJ-uW-3hn">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" style="done" id="WYi-yp-eM6">
+                                            <connections>
+                                                <action selector="done" destination="ObA-dk-sSI" id="Qdu-qn-U6V"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTD-R5-neG" userLabel="Top Layout Guide">
+                                <rect key="frame" x="0.0" y="116" width="600" height="4"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="Enn-Da-qKn" userLabel="Height"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohR-6T-ATN" userLabel="Bottom Layout Guide">
+                                <rect key="frame" x="0.0" y="398" width="600" height="4"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="J6A-9v-rhG" userLabel="Height"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1N-bI-Fhs" userLabel="Container View">
+                                <rect key="frame" x="161" y="120" width="278" height="278"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7ki-ai-HR5">
+                                        <rect key="frame" x="0.0" y="0.0" width="278" height="278"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7ki-ai-HR5" firstAttribute="leading" secondItem="a1N-bI-Fhs" secondAttribute="leading" id="7NS-na-lH4" userLabel="Image View - Left"/>
+                                    <constraint firstItem="7ki-ai-HR5" firstAttribute="top" secondItem="a1N-bI-Fhs" secondAttribute="top" id="ADz-9D-ntf" userLabel="Image View - Top"/>
+                                    <constraint firstAttribute="trailing" secondItem="7ki-ai-HR5" secondAttribute="trailing" id="Ekh-n7-Le9" userLabel="Image View - Right"/>
+                                    <constraint firstAttribute="bottom" secondItem="7ki-ai-HR5" secondAttribute="bottom" id="VFj-QZ-LMQ" userLabel="Image View - Bottom"/>
+                                    <constraint firstAttribute="width" secondItem="a1N-bI-Fhs" secondAttribute="height" multiplier="1:1" id="gnZ-x6-iaU" userLabel="Aspect Ratio"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JTD-R5-neG" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="3uB-gg-Pcw" userLabel="Top Layout Guide - Left"/>
+                            <constraint firstAttribute="trailing" secondItem="NOA-Dm-cuz" secondAttribute="trailing" id="A05-Pj-hrr" userLabel="Navigation Bar - Right"/>
+                            <constraint firstAttribute="centerX" secondItem="a1N-bI-Fhs" secondAttribute="centerX" id="GrN-6A-Mus" userLabel="Container View - Center X"/>
+                            <constraint firstItem="NOA-Dm-cuz" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="HxO-8t-aoh" userLabel="Navigation Bar - Left"/>
+                            <constraint firstAttribute="trailing" secondItem="ohR-6T-ATN" secondAttribute="trailing" id="O40-YP-aB8" userLabel="Bottom Layout Guide - Right"/>
+                            <constraint firstItem="ohR-6T-ATN" firstAttribute="top" secondItem="a1N-bI-Fhs" secondAttribute="bottom" id="RTC-FU-yi4" userLabel="Container View - Bottom"/>
+                            <constraint firstItem="ohR-6T-ATN" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="Y55-q9-7c6" userLabel="Bottom Layout Guide - Left"/>
+                            <constraint firstAttribute="trailing" secondItem="JTD-R5-neG" secondAttribute="trailing" id="hj2-kD-fUH" userLabel="Top Layout Guide - Right"/>
+                            <constraint firstItem="a1N-bI-Fhs" firstAttribute="top" secondItem="JTD-R5-neG" secondAttribute="bottom" id="sg8-KS-WhT" userLabel="Container View - Top"/>
+                            <constraint firstItem="JTD-R5-neG" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" constant="96" id="wYG-uQ-BiH" userLabel="Top Layout Guide - Top"/>
+                            <constraint firstItem="NOA-Dm-cuz" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" id="we0-1t-bgp" userLabel="Navigation Bar - Top"/>
+                            <constraint firstAttribute="centerY" secondItem="ohR-6T-ATN" secondAttribute="centerY" constant="-100" id="yvI-mc-A7I" userLabel="Bottom Layout Guide - Center Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="a1N-bI-Fhs" id="oza-1j-j54"/>
+                        <outlet property="imageView" destination="7ki-ai-HR5" id="lBK-3f-ZIG"/>
+                        <outlet property="view" destination="zMn-AG-sqS" id="Qma-de-2ek"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472" y="-131"/>
+        </scene>
+    </scenes>
+</document>

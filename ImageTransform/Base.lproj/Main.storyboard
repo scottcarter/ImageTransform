@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Image Transform View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImageTransformViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zq3-Ao-kGz" userLabel="Top Layout Guide">
+                                <rect key="frame" x="0.0" y="50" width="600" height="4"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="LTF-5k-pxj" userLabel="Height"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tpw-h7-Q0t" userLabel="Container View">
+                                <rect key="frame" x="178" y="54" width="244" height="244"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ez6-ed-K13">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="244"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ez6-ed-K13" secondAttribute="trailing" id="DVA-Nl-PXG" userLabel="Container View - Right"/>
+                                    <constraint firstAttribute="width" secondItem="Tpw-h7-Q0t" secondAttribute="height" multiplier="1:1" id="OZb-D1-HPF" userLabel="Container View - Aspect 1:1"/>
+                                    <constraint firstItem="ez6-ed-K13" firstAttribute="leading" secondItem="Tpw-h7-Q0t" secondAttribute="leading" id="TqW-fM-d9c" userLabel="Container View - Left"/>
+                                    <constraint firstItem="ez6-ed-K13" firstAttribute="top" secondItem="Tpw-h7-Q0t" secondAttribute="top" id="s4o-8A-rbD" userLabel="Container View - Top"/>
+                                    <constraint firstAttribute="bottom" secondItem="ez6-ed-K13" secondAttribute="bottom" id="vQm-Zc-A8V" userLabel="Container View - Bottom"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVO-Qq-CG5" userLabel="Bottom Layout Guide">
+                                <rect key="frame" x="0.0" y="298" width="600" height="4"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="RTz-GX-862" userLabel="Height"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VVO-Qq-CG5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Sm-bw-kEl" userLabel="Bottom Layout Guide - Left"/>
+                            <constraint firstItem="Zq3-Ao-kGz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="8D7-6X-DhF" userLabel="Top Layout Guide - Top"/>
+                            <constraint firstAttribute="trailing" secondItem="VVO-Qq-CG5" secondAttribute="trailing" id="BdW-UC-jda" userLabel="Bottom Layout Guide - Right"/>
+                            <constraint firstAttribute="trailing" secondItem="Zq3-Ao-kGz" secondAttribute="trailing" id="EH2-KS-5Mq" userLabel="Top Layout Guide - Right"/>
+                            <constraint firstAttribute="centerY" secondItem="VVO-Qq-CG5" secondAttribute="centerY" id="JXt-8z-LlX" userLabel="Bottom Layout Guide - Center Y"/>
+                            <constraint firstItem="VVO-Qq-CG5" firstAttribute="top" secondItem="Tpw-h7-Q0t" secondAttribute="bottom" id="Js4-xK-3uf" userLabel="Container View - Bottom"/>
+                            <constraint firstItem="Tpw-h7-Q0t" firstAttribute="top" secondItem="Zq3-Ao-kGz" secondAttribute="bottom" id="O6d-SJ-a7b" userLabel="Container View - Top"/>
+                            <constraint firstItem="Zq3-Ao-kGz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dmK-ut-W5j" userLabel="Top Layout Guide - Left"/>
+                            <constraint firstAttribute="centerX" secondItem="Tpw-h7-Q0t" secondAttribute="centerX" id="gmP-j4-ztq" userLabel="Container View - Center X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="Tpw-h7-Q0t" id="Lt8-dx-Nw6"/>
+                        <outlet property="imageView" destination="ez6-ed-K13" id="fRP-Ki-Vn2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
